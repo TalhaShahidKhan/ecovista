@@ -1,0 +1,97 @@
+const data = [
+  { location: "London", latitude: 51.5073219, longitude: -0.1276474 },
+  { location: "Kolkata", latitude: 22.5726723, longitude: 88.3638815 },
+  { location: "Dhaka", latitude: 23.777176, longitude: 90.399452 },
+  { location: "Singapore", latitude: 1.2899175, longitude: 103.8519072 },
+  { location: "New York", latitude: 40.7127281, longitude: -74.0060152 },
+  { location: "Toronto", latitude: 43.6534817, longitude: -79.3839347 },
+  { location: "Paris", latitude: 48.8566969, longitude: 2.3514616 },
+  { location: "Tokyo", latitude: 35.6828387, longitude: 139.7594549 },
+  { location: "Sydney", latitude: -33.8679571, longitude: 151.210047 },
+  { location: "Berlin", latitude: 52.5170365, longitude: 13.3888599 },
+  { location: "Rome", latitude: 41.8933203, longitude: 12.4829321 },
+  { location: "Madrid", latitude: 40.4167047, longitude: -3.7035825 },
+  { location: "Beijing", latitude: 39.906217, longitude: 116.3912757 },
+  { location: "Moscow", latitude: 55.7504461, longitude: 37.6174943 },
+  { location: "Bangkok", latitude: 13.7525438, longitude: 100.4934736 },
+  { location: "Dubai", latitude: 25.2653471, longitude: 55.2924914 },
+  { location: "Istanbul", latitude: 41.0091982, longitude: 28.9662186 },
+  { location: "Seoul", latitude: 37.5666791, longitude: 126.9782914 },
+  { location: "Mexico City", latitude: 19.4326296, longitude: -99.1331785 },
+  { location: "Buenos Aires", latitude: -34.6075682, longitude: -58.4370894 },
+  { location: "São Paulo", latitude: -23.5506507, longitude: -46.6333824 },
+  { location: "Cairo", latitude: 30.0443879, longitude: 31.2357257 },
+  { location: "Lagos", latitude: 6.5243793, longitude: 3.3792057 },
+  { location: "Nairobi", latitude: -1.2920659, longitude: 36.8219462 },
+  { location: "Cape Town", latitude: -33.928992, longitude: 18.417396 },
+  { location: "Jakarta", latitude: -6.1753942, longitude: 106.827183 },
+  { location: "Manila", latitude: 14.5906216, longitude: 120.9802926 },
+  { location: "Hanoi", latitude: 21.028511, longitude: 105.804817 },
+  { location: "Tehran", latitude: 35.6891975, longitude: 51.3889736 },
+  { location: "Baghdad", latitude: 33.3128057, longitude: 44.3614875 },
+  { location: "Riyadh", latitude: 24.638916, longitude: 46.7160106 },
+  { location: "Karachi", latitude: 24.8607343, longitude: 67.0011364 },
+  { location: "Lahore", latitude: 31.5656822, longitude: 74.3141829 },
+  { location: "Islamabad", latitude: 33.6938118, longitude: 73.0651511 },
+  { location: "Kathmandu", latitude: 27.708317, longitude: 85.3205817 },
+  { location: "Colombo", latitude: 6.9270786, longitude: 79.861243 },
+  { location: "Helsinki", latitude: 60.1674881, longitude: 24.9427473 },
+  { location: "Oslo", latitude: 59.9133301, longitude: 10.7389701 },
+  { location: "Stockholm", latitude: 59.3251172, longitude: 18.0710935 },
+  { location: "Copenhagen", latitude: 55.6867243, longitude: 12.5700724 },
+  { location: "Vienna", latitude: 48.2083537, longitude: 16.3725042 },
+  { location: "Prague", latitude: 50.0874654, longitude: 14.4212535 },
+  { location: "Warsaw", latitude: 52.2319581, longitude: 21.0067249 },
+  { location: "Budapest", latitude: 47.4979937, longitude: 19.0403594 },
+  { location: "Brussels", latitude: 50.8465573, longitude: 4.351697 },
+  { location: "Amsterdam", latitude: 52.3731087, longitude: 4.8932945 },
+  { location: "Zurich", latitude: 47.3744489, longitude: 8.5410422 },
+  { location: "Athens", latitude: 37.9839412, longitude: 23.7283052 },
+  { location: "Lisbon", latitude: 38.7077507, longitude: -9.1365919 },
+  { location: "Dublin", latitude: 53.3498053, longitude: -6.2603097 },
+  { location: "Edinburgh", latitude: 55.9533456, longitude: -3.1883749 },
+  { location: "Glasgow", latitude: 55.8609825, longitude: -4.2488787 },
+  { location: "Birmingham", latitude: 52.4796992, longitude: -1.9026911 },
+  { location: "Manchester", latitude: 53.4794892, longitude: -2.2451148 },
+  { location: "Leeds", latitude: 53.7996388, longitude: -1.5482484 },
+  { location: "Liverpool", latitude: 53.4083714, longitude: -2.9915726 },
+  { location: "Bristol", latitude: 51.454513, longitude: -2.58791 },
+  { location: "Nottingham", latitude: 52.9547832, longitude: -1.1581086 },
+  { location: "Sheffield", latitude: 53.381129, longitude: -1.470085 },
+  { location: "Cardiff", latitude: 51.481581, longitude: -3.17909 },
+  { location: "Belfast", latitude: 54.597285, longitude: -5.93012 },
+  { location: "Aberdeen", latitude: 57.149717, longitude: -2.094278 },
+  { location: "Reykjavik", latitude: 64.1355, longitude: -21.8954 },
+  { location: "Tallinn", latitude: 59.437, longitude: 24.7536 },
+  { location: "Vilnius", latitude: 54.6872, longitude: 25.2797 },
+  { location: "Riga", latitude: 56.9496, longitude: 24.1052 },
+  { location: "Ljubljana", latitude: 46.0569, longitude: 14.5058 },
+  { location: "Zagreb", latitude: 45.815, longitude: 15.9819 },
+  { location: "Sarajevo", latitude: 43.8563, longitude: 18.4131 },
+  { location: "Belgrade", latitude: 44.7866, longitude: 20.4489 },
+  { location: "Skopje", latitude: 41.9981, longitude: 21.4254 },
+  { location: "Podgorica", latitude: 42.4304, longitude: 19.2594 },
+  { location: "Tirana", latitude: 41.3275, longitude: 19.8189 },
+  { location: "Sofia", latitude: 42.6975, longitude: 23.3242 },
+  { location: "Bucharest", latitude: 44.4268, longitude: 26.1025 },
+  { location: "Chisinau", latitude: 47.0105, longitude: 28.8638 },
+  { location: "Kiev", latitude: 50.4501, longitude: 30.5234 },
+  { location: "Minsk", latitude: 53.9006, longitude: 27.559 },
+  { location: "Tbilisi", latitude: 41.7151, longitude: 44.8271 },
+];
+
+function getLocations() {
+  return data;
+}
+
+function getLocationByName(location) {
+  if (!location) return null;
+
+  const found = data.find(
+    (item) => item.location.toLowerCase() === location.toLowerCase()
+  );
+
+  return found || {};
+}
+
+export { getLocationByName, getLocations };
